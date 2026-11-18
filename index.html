@@ -129,8 +129,10 @@ section.alt .tile{background:var(--tile-2)}
 
 /* about tile */
 .about{display:grid;grid-template-columns:1fr 1.1fr;gap:0;text-align:left;padding:0;align-items:stretch;min-height:0}
-.about .ph{position:relative;min-height:520px;overflow:hidden}
-.about .ph img{position:absolute;inset:0;width:100%;height:120%;object-fit:cover;object-position:center 30%;will-change:transform}
+.about .ph{position:relative;min-height:520px;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:48px}
+.about .ph::before{content:"";position:absolute;inset:-40px;background:url(profile.png) center/cover;filter:blur(36px) saturate(1.25);opacity:.55;transform:scale(1.1)}
+.about .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.18))}
+.about .ph img{position:relative;z-index:1;width:min(100%,320px);aspect-ratio:1;object-fit:cover;border-radius:28px;box-shadow:0 24px 60px rgba(0,0,0,.35),0 0 0 1px rgba(255,255,255,.18);will-change:transform}
 .about .txt{padding:60px 56px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
 .about .txt h3{margin-bottom:18px}
 .about .txt p{color:var(--text-2);font-size:17px;margin-bottom:14px;max-width:470px}
@@ -279,7 +281,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
   #gl{opacity:.9}
   .tiles{grid-template-columns:1fr}
   .about{grid-template-columns:1fr}
-  .about .ph{min-height:420px}
+  .about .ph{min-height:0;padding:40px 28px}
+  .about .ph img{width:min(100%,260px)}
   .about .txt{padding:40px 28px 46px}
   .facts{grid-template-columns:1fr 1fr}
   .spec{grid-template-columns:1fr;gap:16px}
@@ -376,7 +379,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
           <div class="kick">About</div>
           <h3>Hi, I'm Siddhanth.</h3>
           <p>I'm a <b>Software Engineering student at the University of the South Pacific</b> with three years of real-world IT support behind me. That job taught me to build things that keep working when people actually use them.</p>
-          <p>Today I design, build and deploy full-stack and AI-powered applications — most recently <b>NexusBot</b>, running on Render and Oracle Cloud. I work mostly in <b>Python and JavaScript</b> and keep a Kali Linux lab for security practice.</p>
+          <p>Today I design, build and deploy full-stack and AI-powered applications — most recently <b>Nexus AI</b>, running on Render and Oracle Cloud. I work mostly in <b>Python and JavaScript</b> and keep a Kali Linux lab for security practice.</p>
           <p>Outside code: travelling, gaming, origami, sketching and swimming.</p>
           <div style="display:flex;gap:26px;margin-top:10px;flex-wrap:wrap"><a class="more" href="https://github.com/Siddhanth-Mani" target="_blank" rel="noopener">GitHub</a><a class="more" href="#specs">Full background</a></div>
         </div>

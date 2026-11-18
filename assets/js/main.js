@@ -713,7 +713,7 @@ addEventListener('scroll', () => {
   const r = aboutImg.parentElement.getBoundingClientRect();
   if (r.bottom > 0 && r.top < innerHeight && !reduce){
     const p = (r.top + r.height / 2 - innerHeight / 2) / innerHeight;
-    aboutImg.style.transform = `translateY(${-8 + p * 12}%)`;
+    aboutImg.style.transform = `translateY(${p * -24}px)`;
   }
 }, { passive: true });
 })();
