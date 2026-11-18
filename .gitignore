@@ -1,0 +1,6 @@
+# Never publish: CV with references' private contact details, and old drafts
+*.pdf
+*.docx
+index-v*.html
+Thumbs.db
+desktop.ini
