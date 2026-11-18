@@ -81,6 +81,8 @@ img{display:block;max-width:100%}
 .pill.ghost{background:transparent;color:var(--link);border:1px solid var(--link)}
 .pill.ghost:hover{background:var(--link);color:#fff}
 .more::after{content:" ›";font-size:1.15em}
+.tile .links a.pill{color:#fff}
+.inl{color:inherit;text-decoration:underline;text-decoration-color:var(--link);text-underline-offset:3px}.inl:hover{color:var(--link)}
 
 /* ---------- story (pinned hero + chapters) ---------- */
 .story{position:relative;height:500vh}
@@ -366,6 +368,7 @@ h2 .w{display:inline-block;opacity:0;transform:translateY(.55em) rotate(2deg);tr
           <h2>Now I build<br>with AI.</h2>
           <p>Nexus AI — a multi-model assistant with automatic failover, a code runner, document search and Telegram &amp; WhatsApp built in.</p>
           <div class="meta"><span><b>5</b> AI providers</span><span><b>1,000+</b> tests in CI</span></div>
+          <div class="ctas"><a class="pill" href="https://nexusfj.indevs.in/" target="_blank" rel="noopener">Try Nexus AI</a></div>
         </div>
         <div class="chap" data-i="4">
           <div class="eyebrow">For fun</div>
@@ -388,7 +391,7 @@ h2 .w{display:inline-block;opacity:0;transform:translateY(.55em) rotate(2deg);tr
           <div class="kick">About</div>
           <h3>Hi, I'm Siddhanth.</h3>
           <p>I'm a <b>Software Engineering student at the University of the South Pacific</b> with three years of real-world IT support behind me. That job taught me to build things that keep working when people actually use them.</p>
-          <p>Today I design, build and deploy full-stack and AI-powered applications — most recently <b>Nexus AI</b>, running on Render and Oracle Cloud. I work mostly in <b>Python and JavaScript</b> and keep a Kali Linux lab for security practice.</p>
+          <p>Today I design, build and deploy full-stack and AI-powered applications — most recently <a class="inl" href="https://nexusfj.indevs.in/" target="_blank" rel="noopener"><b>Nexus AI</b></a>, running on Render and Oracle Cloud. I work mostly in <b>Python and JavaScript</b> and keep a Kali Linux lab for security practice.</p>
           <p>Outside code: travelling, gaming, origami, sketching and swimming.</p>
           <div style="display:flex;gap:26px;margin-top:10px;flex-wrap:wrap"><a class="more" href="https://github.com/Siddhanth-Mani" target="_blank" rel="noopener">GitHub</a><a class="more" href="#specs">Full background</a></div>
         </div>
@@ -411,6 +414,7 @@ h2 .w{display:inline-block;opacity:0;transform:translateY(.55em) rotate(2deg);tr
           <div class="kick" style="color:#e39a45">Python · Flask · JavaScript</div>
           <h3>Nexus AI</h3>
           <div class="sub">An AI assistant that keeps answering — even when a provider goes down.</div>
+          <div class="links"><a class="pill" href="https://nexusfj.indevs.in/" target="_blank" rel="noopener">Try it live</a></div>
           <div class="nb-stats">
             <div><b data-count="5">5</b><span>model providers with failover</span></div>
             <div><b data-count="1000" data-suffix="+">1,000+</b><span>tests via GitHub Actions</span></div>
