@@ -589,7 +589,7 @@ for (let i = 0; i < 28; i++) bars.appendChild(document.createElement('i'));
 function tickBars(){ [...bars.children].forEach(b => { const h = 15 + Math.random() * 80; b.style.height = h + '%'; b.classList.toggle('hi', h > 82); }); }
 tickBars(); if (!reduce) setInterval(() => { if (!document.hidden) tickBars(); }, 1600);
 
-/* ---------- CyberSec quiz: three levels, flip between them ---------- */
+/* ---------- CyberSec quiz: five levels, flip between them ---------- */
 const levels = [
   { lvl: 'Password Strength · Level 1', xp: 100, q: 'Which of these is the most secure password?',
     opts: ['password123', 'Admin2024!', 'qwerty', 'Tr0ub4dor&3'], ans: 3, note: 'Correct — long, mixed and unpredictable. +100 XP' },
@@ -597,6 +597,10 @@ const levels = [
     opts: ['Too short', 'Predictable substitutions', 'No symbols', 'No numbers'], ans: 1, note: 'Right — @→a and 0→o are the first swaps crackers try. +250 XP' },
   { lvl: 'Password Strength · Level 3', xp: 500, q: 'Entropy of a 12-char random alphanumeric password?',
     opts: ['~40 bits', '~70 bits', '~100 bits', '~128 bits'], ans: 1, note: 'Exactly — 12 × log₂(62) ≈ 71 bits. +500 XP' },
+  { lvl: 'Password Storage · Level 4', xp: 750, q: 'Best way for a website to store user passwords?',
+    opts: ['MD5 hash', 'AES encryption', 'Salted bcrypt / Argon2', 'Plain SHA-256'], ans: 2, note: 'Spot on — slow, salted hashing makes cracking leaked hashes impractical. +750 XP' },
+  { lvl: 'Account Defence · Level 5', xp: 1000, q: 'Your password shows up in a breach. What protects you most?',
+    opts: ['Change one character', 'Turn on MFA + new password', 'Security question', 'Clear your cookies'], ans: 1, note: 'Perfect — a fresh unique password plus MFA stops credential stuffing. +1,000 XP' },
 ];
 const qflip = document.getElementById('qflip'), qdots = document.getElementById('qdots'), qxp = document.getElementById('qxp');
 levels.forEach(() => qdots.appendChild(document.createElement('i')));
@@ -638,7 +642,7 @@ function answer(btn, i, L){
 function renderDone(){
   qflip.replaceChildren();
   const box = el('div', 'qdone'); const again = el('button', null, 'Play again'); again.type = 'button';
-  box.append(el('div', 'big', '🏆'), el('h5', null, 'Challenge complete'), el('p', null, `All three levels cleared — ${qxpVal.toLocaleString()} XP earned.`), again);
+  box.append(el('div', 'big', '🏆'), el('h5', null, 'Challenge complete'), el('p', null, `All five levels cleared — ${qxpVal.toLocaleString()} XP earned.`), again);
   qflip.append(box); paintDots();
   again.addEventListener('click', () => { if (busy) return; busy = true; qxpVal = 0; qxp.textContent = '0 XP'; qi = 0; flipTo(renderLevel); });
 }
@@ -678,6 +682,14 @@ nextB.addEventListener('click', () => car.scrollBy({ left: step(), behavior: red
 const carState = () => { prev.disabled = car.scrollLeft < 5; nextB.disabled = car.scrollLeft + car.clientWidth >= car.scrollWidth - 5; };
 car.addEventListener('scroll', carState, { passive: true }); addEventListener('resize', carState); carState();
 
+/* ---------- headline word-rise ---------- */
+document.querySelectorAll('.sec-title h2, .contact h2, #more h2').forEach(h => {
+  if (h.children.length) return;
+  const words = h.textContent.trim().split(/\s+/); h.setAttribute('aria-label', h.textContent.trim()); h.replaceChildren();
+  words.forEach((w, i) => { const s = el('span', 'w', w); s.style.setProperty('--i', i); s.setAttribute('aria-hidden', 'true'); h.append(s, ' '); });
+  if (!h.closest('.rv')) { h.classList.add('rv'); }
+});
+
 /* ---------- reveal + counters ---------- */
 function countUp(n){
   const target = +n.dataset.count, suf = n.dataset.suffix || '', t0 = performance.now();
@@ -708,8 +720,11 @@ if (!reduce && matchMedia('(hover:hover)').matches){
 
 /* ---------- about photo parallax + nav ---------- */
 const aboutImg = document.getElementById('aboutImg'), gnav = document.getElementById('gnav');
+const prog = el('div', 'prog'); prog.setAttribute('aria-hidden', 'true'); gnav.append(prog);
 addEventListener('scroll', () => {
   gnav.classList.toggle('scrolled', scrollY > 10);
+  const max = document.documentElement.scrollHeight - innerHeight;
+  prog.style.transform = `scaleX(${max > 0 ? Math.min(scrollY / max, 1) : 0})`;
   const r = aboutImg.parentElement.getBoundingClientRect();
   if (r.bottom > 0 && r.top < innerHeight && !reduce){
     const p = (r.top + r.height / 2 - innerHeight / 2) / innerHeight;
