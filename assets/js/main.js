@@ -35,7 +35,8 @@ function storyProgress(){
 function updateChapters(){
   progress = storyProgress();
   chaps.forEach((c, i) => {
-    const d = progress - i, w = Math.max(0, 1 - Math.abs(d) * 1.9);
+    // fade out completely before the next chapter fades in (no overlapping text mid-scroll)
+    const d = progress - i, w = Math.max(0, 1 - Math.abs(d) * 2.6);
     c.style.opacity = w;
     c.style.transform = `translateY(${-d * 50}px)`;
     c.classList.toggle('on', w > .5);
@@ -508,7 +509,7 @@ function initGL(){
     renderer.setSize(w, h, false); camera.aspect = w / h; camera.updateProjectionMatrix();
     const desktop = w > 900;
     const narrow = w / h < 1.45;                       // squarer desktop windows need a smaller laptop
-    group.userData = { x: desktop ? (narrow ? 1.45 : 1.7) : -.3, y: desktop ? -.7 : 1.15, s: desktop ? (narrow ? .78 : .88) : .58 };
+    group.userData = { x: desktop ? (narrow ? 1.45 : 1.7) : -.3, y: desktop ? -.7 : 1.3, s: desktop ? (narrow ? .78 : .88) : .58 };
     group.position.x = group.userData.x;
   }
   new ResizeObserver(resize).observe(canvas); resize();
@@ -531,14 +532,16 @@ function initGL(){
     lid.rotation.x = CLOSED + (OPEN - CLOSED) * openP;
     group.scale.setScalar(ud.s * (reduce ? 1 : .9 + .1 * ease(clamp(t / .8))));
 
-    // screen: boot, then the view for the current chapter (cross-fading between chapters)
-    const appT = reduce ? 30 : t - 2.4;
-    if (!reduce && t < 2.4){ bootScreen(sc, clamp((t - .9) / 1.3)); }
+    // screen: boot, then the view for the current chapter (cross-fading between chapters).
+    // Screen content always animates: typing on a screen isn't the kind of motion "reduce motion" is about
+    // (Windows sets it whenever animation effects are off), so only the laptop's own movement is held still.
+    const appT = t - 2.4;
+    if (t < 2.4){ bootScreen(sc, clamp((t - .9) / 1.3)); }
     else {
       const f = clamp(progress, 0, VIEWS.length - 1), i0 = Math.floor(f), frac = f - i0;
       VIEWS[i0](sc, appT, ACCENTS[i0]);
       if (frac > .01 && i0 + 1 < VIEWS.length){ sc.save(); sc.globalAlpha = frac; VIEWS[i0 + 1](sc, appT, ACCENTS[i0 + 1]); sc.restore(); }
-      if (!reduce && t < 2.9){ sc.fillStyle = `rgba(0,0,0,${1 - (t - 2.4) / .5})`; sc.fillRect(0, 0, SW, SH); }
+      if (t < 2.9){ sc.fillStyle = `rgba(0,0,0,${1 - (t - 2.4) / .5})`; sc.fillRect(0, 0, SW, SH); }
     }
     scrTex.needsUpdate = true;
     accentColor.set(ACCENTS[Math.round(clamp(progress, 0, 4))]);
@@ -579,7 +582,7 @@ function runTerm(){
     if (i >= lines.length) return;
     slots[i].style.visibility = 'visible';
     const delay = lines[i][1]; i++;
-    if (delay && !reduce) setTimeout(next, delay); else next();
+    if (delay) setTimeout(next, delay); else next();
   })();
 }
 
@@ -587,7 +590,7 @@ function runTerm(){
 const bars = document.getElementById('bars');
 for (let i = 0; i < 28; i++) bars.appendChild(document.createElement('i'));
 function tickBars(){ [...bars.children].forEach(b => { const h = 15 + Math.random() * 80; b.style.height = h + '%'; b.classList.toggle('hi', h > 82); }); }
-tickBars(); if (!reduce) setInterval(() => { if (!document.hidden) tickBars(); }, 1600);
+tickBars(); setInterval(() => { if (!document.hidden) tickBars(); }, 1600);
 
 /* ---------- CyberSec quiz: five levels, flip between them ---------- */
 const levels = [
@@ -699,7 +702,7 @@ function countUp(n){
 const io = new IntersectionObserver(es => es.forEach(en => {
   if (!en.isIntersecting) return;
   const t = en.target; t.classList.add('in');
-  if (!reduce) t.querySelectorAll('[data-count]').forEach(countUp);
+  t.querySelectorAll('[data-count]').forEach(countUp);
   if (t.querySelector('#termOut') && !termRunning){ termRunning = true; runTerm(); }
   io.unobserve(t);
 }), { threshold: .15 });
