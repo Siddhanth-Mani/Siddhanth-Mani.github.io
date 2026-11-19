@@ -588,9 +588,11 @@ function runTerm(){
 
 /* ---------- SOC bars ---------- */
 const bars = document.getElementById('bars');
-for (let i = 0; i < 28; i++) bars.appendChild(document.createElement('i'));
-function tickBars(){ [...bars.children].forEach(b => { const h = 15 + Math.random() * 80; b.style.height = h + '%'; b.classList.toggle('hi', h > 82); }); }
-tickBars(); setInterval(() => { if (!document.hidden) tickBars(); }, 1600);
+if (bars) {
+  for (let i = 0; i < 28; i++) bars.appendChild(document.createElement('i'));
+  const tickBars = () => { [...bars.children].forEach(b => { const h = 15 + Math.random() * 80; b.style.height = h + '%'; b.classList.toggle('hi', h > 82); }); };
+  tickBars(); setInterval(() => { if (!document.hidden) tickBars(); }, 1600);
+}
 
 /* ---------- CyberSec quiz: five levels, flip between them ---------- */
 const levels = [
@@ -679,11 +681,13 @@ groups.forEach(([title, items]) => {
 
 /* ---------- carousel ---------- */
 const car = document.getElementById('carousel'), prev = document.getElementById('prev'), nextB = document.getElementById('next');
-const step = () => car.querySelector('.card').offsetWidth + 18;
-prev.addEventListener('click', () => car.scrollBy({ left: -step(), behavior: reduce ? 'auto' : 'smooth' }));
-nextB.addEventListener('click', () => car.scrollBy({ left: step(), behavior: reduce ? 'auto' : 'smooth' }));
-const carState = () => { prev.disabled = car.scrollLeft < 5; nextB.disabled = car.scrollLeft + car.clientWidth >= car.scrollWidth - 5; };
-car.addEventListener('scroll', carState, { passive: true }); addEventListener('resize', carState); carState();
+if (car && prev && nextB) {
+  const step = () => car.querySelector('.card').offsetWidth + 18;
+  prev.addEventListener('click', () => car.scrollBy({ left: -step(), behavior: reduce ? 'auto' : 'smooth' }));
+  nextB.addEventListener('click', () => car.scrollBy({ left: step(), behavior: reduce ? 'auto' : 'smooth' }));
+  const carState = () => { prev.disabled = car.scrollLeft < 5; nextB.disabled = car.scrollLeft + car.clientWidth >= car.scrollWidth - 5; };
+  car.addEventListener('scroll', carState, { passive: true }); addEventListener('resize', carState); carState();
+}
 
 /* ---------- headline word-rise ---------- */
 document.querySelectorAll('.sec-title h2, .contact h2, #more h2').forEach(h => {

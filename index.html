@@ -7,13 +7,13 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://cdn.jsdelivr.net; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Siddhanth Kartik Mani — Software Engineer</title>
-<meta name="description" content="Siddhanth Kartik Mani — Software Engineering student at the University of the South Pacific. Full-stack, applied AI, security and games.">
+<meta name="description" content="Siddhanth Kartik Mani — Software Engineering student at the University of the South Pacific with three years of IT support. Service desk, networking and security tools, plus full-stack and AI apps.">
 <meta name="author" content="Siddhanth Kartik Mani">
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Siddhanth Kartik Mani — Software Engineer">
-<meta property="og:description" content="Full-stack apps, AI tools, security projects and games — from Suva, Fiji.">
+<meta property="og:title" content="Siddhanth Kartik Mani — Software Engineer &amp; IT Support">
+<meta property="og:description" content="Service desk, networking and security tools, plus full-stack and AI apps — from Suva, Fiji.">
 <meta property="og:image" content="https://siddhanth.ryzn.pro/assets/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -319,6 +319,38 @@ h2 .w{display:inline-block;opacity:0;transform:translateY(.55em) rotate(2deg);tr
   /* keep gentle fades and screen animations; drop sliding, flipping and parallax movement */
   .rv,h2 .w,.sg .icon,.facts .fact{transform:none!important}
 }
+
+/* ---------- flagship screenshots, case studies, project grid ---------- */
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.badges .avail{margin-top:0}
+.avail.cert{color:var(--text);text-decoration:none}.avail.cert svg{width:15px;height:15px;color:#0071e3}
+.shot{margin:0;width:min(860px,100%);border-radius:14px 14px 0 0;overflow:hidden;background:var(--bg);box-shadow:0 -12px 50px rgba(0,0,0,.12);border:1px solid var(--hair);border-bottom:0}
+.tile:not(.full) .shot{width:min(600px,100%)}
+.shot .chrome{display:flex;align-items:center;gap:6px;padding:9px 12px;background:var(--tile-2);border-bottom:1px solid var(--hair)}
+.shot .chrome i{width:9px;height:9px;border-radius:50%;background:#ff5f57}.shot .chrome i:nth-child(2){background:#febc2e}.shot .chrome i:nth-child(3){background:#28c840}
+.shot .chrome small{margin-left:auto;margin-right:auto;font-size:11px;color:var(--text-2)}
+.shot img{display:block;width:100%;height:auto}
+.tile .note{font-size:15px;color:var(--text-2);max-width:520px;margin-top:14px}
+.case{margin-top:18px;width:min(900px,100%);text-align:left}
+.case summary{cursor:pointer;list-style:none;text-align:center;font-size:15px;font-weight:600;color:var(--link)}
+.case summary::-webkit-details-marker{display:none}
+.case summary::after{content:" +";font-weight:500}.case[open] summary::after{content:" \2212"}
+.case-body{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:14px}
+.case-body>div{background:var(--bg);border:1px solid var(--hair);border-radius:16px;padding:16px 18px}
+.tile.dark .case-body>div{background:#1c1c1e;border-color:#2c2c2e}
+.tile.dark .case summary{color:#2997ff}
+.case h5{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--amber);margin:0 0 6px}
+.case p{font-size:14.5px;line-height:1.5;color:var(--text-2);margin:0}
+.tile.dark .case p{color:var(--dark-2)}
+.case code{font-size:.92em}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+.grid .card{min-height:0;padding:24px 22px}
+.grid .card .ic{width:42px;height:42px;border-radius:12px;margin-bottom:16px}.grid .card .ic svg{width:21px;height:21px}
+.grid .card .k{margin-top:0}
+.grid .card h4{font-size:20px;margin:4px 0 8px}
+.grid.small .card{padding:20px}.grid.small .card h4{font-size:18px}
+.grid-head{font-size:22px;font-weight:700;letter-spacing:-.02em;margin:48px 0 16px}
+footer a{color:var(--link)}
+@media (max-width:820px){.case-body{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -353,8 +385,8 @@ h2 .w{display:inline-block;opacity:0;transform:translateY(.55em) rotate(2deg);tr
         <div class="chap on" data-i="0">
           <div class="eyebrow">Siddhanth Kartik Mani</div>
           <h1>Software that<br>solves real<br>problems.</h1>
-          <p>Software engineering student building full-stack apps, AI tools and games — from Suva, Fiji.</p>
-          <div class="avail"><i></i>Open to internships &amp; graduate roles</div>
+          <p>Software engineering student with three years of IT support behind me. I build service desk, networking and security tools — and full-stack AI apps — from Suva, Fiji.</p>
+          <div class="badges"><div class="avail"><i></i>Open to IT support, internship &amp; graduate roles</div><a class="avail cert" href="#specs" title="Cisco Networking Academy, verified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg>Cisco certified · Intro to Cybersecurity</a></div>
           <div class="ctas"><a class="pill" href="#work">See my work</a><a class="more" href="assets/cv/Siddhanth_Mani_CV.pdf" download>Download CV</a></div>
         </div>
         <div class="chap" data-i="1">
@@ -404,9 +436,9 @@ h2 .w{display:inline-block;opacity:0;transform:translateY(.55em) rotate(2deg);tr
       </div>
       <div class="facts">
         <div class="fact rv"><b data-count="3">3</b><span>years in IT support</span></div>
-        <div class="fact rv"><b data-count="11">11</b><span>open-source projects on GitHub</span></div>
+        <div class="fact rv"><b data-count="12">12</b><span>open-source projects on GitHub</span></div>
         <div class="fact rv"><b data-count="5">5</b><span>AI providers integrated</span></div>
-        <div class="fact rv"><b data-count="19">19</b><span>projects &amp; games built</span></div>
+        <div class="fact rv"><b data-count="20">20</b><span>projects &amp; games built</span></div>
       </div>
     </div>
   </section>
@@ -426,6 +458,7 @@ h2 .w{display:inline-block;opacity:0;transform:translateY(.55em) rotate(2deg);tr
             <div><b data-count="1000" data-suffix="+">1,000+</b><span>tests via GitHub Actions</span></div>
             <div><b data-count="2">2</b><span>cloud deployments</span></div>
           </div>
+          <details class="case"><summary>Read the case study</summary><div class="case-body"><div><h5>Problem</h5><p>Free AI APIs rate-limit, time out and go down without warning, so a chatbot that depends on one provider just stops answering.</p></div><div><h5>Approach</h5><p>A Flask back end that streams answers and fails over between five model providers, with a sandboxed code runner, document search and Telegram and WhatsApp bots. It's deployed with Docker and Caddy, and CI runs on every push.</p></div><div><h5>Result</h5><p>It keeps answering when a provider fails. Over 1,000 tests run in GitHub Actions, and it's deployed on Render and Oracle Cloud.</p></div></div></details>
           <div class="visual">
             <div class="term tilt">
               <div class="bar"><i></i><i></i><i></i><small>nexus-ai — server log</small></div>
@@ -434,38 +467,31 @@ h2 .w{display:inline-block;opacity:0;transform:translateY(.55em) rotate(2deg);tr
           </div>
         </article>
 
-        <article class="tile rv">
-          <div class="kick">React · Vite · Tailwind</div>
-          <h3>SOC Dashboard</h3>
-          <div class="sub">A security operations centre prototype with live threat telemetry and an AI analyst view.</div>
-          <div class="visual">
-            <div class="soc tilt" aria-label="Illustration of the SOC dashboard">
-              <div class="row"><b>Threat telemetry</b><span class="live">Live</span></div>
-              <div class="bars" id="bars"></div>
-              <div class="alerts">
-                <div><span class="sev h">HIGH</span><span>Brute-force attempt</span><code>T1110</code></div>
-                <div><span class="sev m">MED</span><span>Port scan detected</span><code>T1046</code></div>
-                <div><span class="sev l">LOW</span><span>New device on VLAN</span><code>T1200</code></div>
-              </div>
-            </div>
-          </div>
+        <article class="tile full rv">
+          <div class="kick">Python · Flask · SQLite · Docker</div>
+          <h3>IT Helpdesk</h3>
+          <div class="sub">A multi-user service desk with SLA timers, technician queues and a full audit trail.</div>
+          <div class="links"><a class="pill" href="https://siddhanth.ryzn.pro/helpdesk/" target="_blank" rel="noopener">Try the live demo</a><a class="more" href="https://github.com/Siddhanth-Mani/it-helpdesk" target="_blank" rel="noopener">View on GitHub</a></div>
+          <details class="case"><summary>Read the case study</summary><div class="case-body"><div><h5>Problem</h5><p>Small IT teams track requests in email and chat. Urgent issues get buried, nobody owns them, and no one can say whether response targets are being met.</p></div><div><h5>Approach</h5><p>A Flask REST API (<code>/api/v1</code>) with staff, technician and admin roles, SLA clocks that pause while waiting on the user, soft delete and an audit log of every change. Hardened sessions with CSRF tokens, lockout, rate limits and a strict CSP. One Docker container behind Caddy on Oracle Cloud, with daily verified backups.</p></div><div><h5>Result</h5><p>Live with one-click demo roles. 46 automated tests run in GitHub Actions on three Python versions, then the image is built and smoke-tested. The container uses about 45 MB of memory.</p></div></div></details>
+          <div class="visual"><figure class="shot tilt"><div class="chrome"><i></i><i></i><i></i><small>siddhanth.ryzn.pro/helpdesk</small></div><img src="assets/shots/helpdesk.jpg" alt="IT Helpdesk dashboard showing open, overdue and at-risk tickets, SLA met percentage and a 14-day chart" loading="lazy" width="800" height="500"></figure></div>
         </article>
 
         <article class="tile rv">
-          <div class="kick">Python · Matplotlib</div>
-          <h3>Nausori Geotechnical Check</h3>
-          <div class="sub">Independently re-verifies a foundation design — pile capacity, settlement and footing feasibility.</div>
-          <div class="visual">
-            <div class="chart tilt" aria-label="Illustrative chart comparing capacity with design load">
-              <div class="cap"><span>Pile capacity vs. design load</span><span>kN</span></div>
-              <svg viewBox="0 0 400 180">
-                <g stroke="var(--hair)" stroke-width="1"><line x1="0" y1="40" x2="400" y2="40"/><line x1="0" y1="90" x2="400" y2="90"/><line x1="0" y1="140" x2="400" y2="140"/></g>
-                <path class="draw" d="M0,165 C60,150 110,118 170,92 S290,48 400,30" fill="none" stroke="#0071e3" stroke-width="3" stroke-linecap="round"/>
-                <path class="draw" d="M0,150 L400,96" fill="none" stroke="var(--amber)" stroke-width="2.5" stroke-dasharray="6 6" stroke-linecap="round" style="stroke-dasharray:600"/>
-              </svg>
-              <div class="lg"><span><i style="background:#0071e3"></i>Computed capacity</span><span><i style="background:var(--amber)"></i>Design load</span></div>
-            </div>
-          </div>
+          <div class="kick">JavaScript · Networking · CCNA</div>
+          <h3>PacketLab</h3>
+          <div class="sub">A network simulator in the browser: build topologies, trace packets hop by hop and fix broken links.</div>
+          <div class="links"><a class="pill" href="https://siddhanth-mani.github.io/packetlab/" target="_blank" rel="noopener">Try it</a><a class="more" href="https://github.com/Siddhanth-Mani/packetlab" target="_blank" rel="noopener">GitHub</a></div>
+          <details class="case"><summary>Read the case study</summary><div class="case-body"><div><h5>Problem</h5><p>Practising CCNA topics usually means installing Packet Tracer, and it is hard to see what a packet actually does at each hop.</p></div><div><h5>Approach</h5><p>A drag-and-drop topology canvas with an IOS-style command line, a VLSM planner, DHCP, DNS, NAT and ACLs, and a step-by-step packet tracer. Everything runs locally in the browser.</p></div><div><h5>Result</h5><p>Six guided labs and a CCNA quiz. It works offline, and nothing is uploaded.</p></div></div></details>
+          <div class="visual"><figure class="shot tilt"><div class="chrome"><i></i><i></i><i></i><small>PacketLab</small></div><img src="assets/shots/packetlab.jpg" alt="PacketLab topology workspace with a router, switch and devices" loading="lazy" width="800" height="500"></figure></div>
+        </article>
+
+        <article class="tile rv">
+          <div class="kick">JavaScript · Canvas · Game engines</div>
+          <h3>PlayForge</h3>
+          <div class="sub">Type “a night race through Suva” and play it a second later.</div>
+          <div class="links"><a class="pill" href="https://siddhanth-mani.github.io/playforge/" target="_blank" rel="noopener">Play it</a><a class="more" href="https://github.com/Siddhanth-Mani/playforge" target="_blank" rel="noopener">GitHub</a></div>
+          <p class="note">Racing, platformer and shooter engines written from scratch, with AI rivals, missions, an editor and share links. 26 tests.</p>
+          <div class="visual"><figure class="shot tilt"><div class="chrome"><i></i><i></i><i></i><small>PlayForge · Suva After Dark</small></div><img src="assets/shots/playforge.jpg" alt="PlayForge racing game: cars racing at night through a city" loading="lazy" width="800" height="500"></figure></div>
         </article>
       </div>
     </div>
@@ -503,29 +529,31 @@ h2 .w{display:inline-block;opacity:0;transform:translateY(.55em) rotate(2deg);tr
     </div>
   </section>
 
-  <!-- ===== MORE PROJECTS (carousel) ===== -->
+  <!-- ===== MORE PROJECTS ===== -->
   <section class="sec alt" id="more">
-    <div class="wrap car-head rv">
-      <h2>More projects.</h2>
-      <div class="car-nav"><button id="prev" aria-label="Previous">‹</button><button id="next" aria-label="Next">›</button></div>
-    </div>
-    <div class="carousel" id="carousel">
-      <div class="card"><div class="ic" style="background:#ede9fe;color:#6d28d9"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="4"/><path d="M7 10v4M5 12h4"/><circle cx="15.5" cy="11" r="1"/><circle cx="18" cy="13.5" r="1"/></svg></div><div class="k">JavaScript · Canvas · Game engines</div><h4>PlayForge</h4><p>Type "make a racing game in Fiji" and play it a second later. Racing, platformer and shooter engines written from scratch, with AI rivals, missions, an editor and share links. 26 tests.</p><div class="cl"><a href="https://siddhanth-mani.github.io/playforge/" target="_blank" rel="noopener">Play it</a> &nbsp;·&nbsp; <a href="https://github.com/Siddhanth-Mani/playforge" target="_blank" rel="noopener">View on GitHub</a></div></div>
-      <div class="card"><div class="ic" style="background:#e0f2fe;color:#0369a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="5" rx="1"/><rect x="2" y="17" width="6" height="5" rx="1"/><rect x="16" y="17" width="6" height="5" rx="1"/><path d="M12 7v5M5 17v-3h14v3"/><path d="M12 12h0"/></svg></div><div class="k">JavaScript · Networking · CCNA</div><h4>PacketLab</h4><p>Network simulator in the browser: drag out a topology, plan VLSM subnets, trace packets hop by hop, configure devices from an IOS-style CLI, set up DHCP, DNS, NAT and ACLs, then break links and diagnose them. Includes six labs and a CCNA quiz.</p><div class="cl"><a href="https://siddhanth-mani.github.io/packetlab/" target="_blank" rel="noopener">Try it</a> &nbsp;·&nbsp; <a href="https://github.com/Siddhanth-Mani/packetlab" target="_blank" rel="noopener">View on GitHub</a></div></div>
+    <div class="wide">
+      <div class="sec-title rv"><h2>More projects.</h2><p>Security tools, network utilities and admin apps.</p></div>
+      <div class="grid rv">
+      <div class="card"><div class="ic" style="background:#eef2ff;color:#4338ca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7V4h6v3M8 7h8v3a4 4 0 0 1-8 0zM12 14v4M9 21h6"/><circle cx="12" cy="10" r="1.3"/></svg></div><div class="k">C# · WPF · Endpoint security</div><h4>USBAuthGuard</h4><p>Turns a trusted USB drive into a physical key: Windows locks when it is pulled out, unknown drives trigger an alert, and an AES-encrypted vault opens only with the key present.</p><div class="cl"><a href="https://github.com/Siddhanth-Mani/usb-auth-guard" target="_blank" rel="noopener">View on GitHub</a></div></div>
       <div class="card"><div class="ic" style="background:#fee2e2;color:#b91c1c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h5M8 17h3"/><circle cx="17" cy="16" r="2.5"/><path d="m19 18 2 2"/></svg></div><div class="k">Python · Security · Blue team</div><h4>Log Triage</h4><p>Reads SSH auth logs and nginx/Apache access logs and flags brute force, logins that succeed after failures, scanners, exposed secret files and injection attempts. Text, JSON or HTML reports; no dependencies, 31 tests.</p><div class="cl"><a href="https://siddhanth-mani.github.io/log-triage/" target="_blank" rel="noopener">Sample report</a> &nbsp;·&nbsp; <a href="https://github.com/Siddhanth-Mani/log-triage" target="_blank" rel="noopener">View on GitHub</a></div></div>
-      <div class="card"><div class="ic" style="background:#dcfce7;color:#15803d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 13h4M8 16h7"/></svg></div><div class="k">JavaScript · IT support</div><h4>Service Desk</h4><p>Helpdesk ticket tracker for a small IT team: SLA timers per priority that pause while waiting on the user, full history, resolve notes, stats, CSV export and backups. Runs in the browser.</p><div class="cl"><a href="https://siddhanth-mani.github.io/service-desk/" target="_blank" rel="noopener">Try it</a> &nbsp;·&nbsp; <a href="https://github.com/Siddhanth-Mani/service-desk" target="_blank" rel="noopener">View on GitHub</a></div></div>
       <div class="card"><div class="ic" style="background:#dbeafe;color:#1d4ed8"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="5" rx="1"/><rect x="2" y="17" width="6" height="5" rx="1"/><rect x="16" y="17" width="6" height="5" rx="1"/><path d="M12 7v5M5 17v-3h14v3"/></svg></div><div class="k">JavaScript · Networking</div><h4>Subnet Planner</h4><p>IPv4 calculator, VLSM planner and route summariser. Places subnets on their boundaries, lists the space left over, handles /31 and /32, and saves plans in a shareable link. 16 tests.</p><div class="cl"><a href="https://siddhanth-mani.github.io/subnet-planner/" target="_blank" rel="noopener">Try it</a> &nbsp;·&nbsp; <a href="https://github.com/Siddhanth-Mani/subnet-planner" target="_blank" rel="noopener">View on GitHub</a></div></div>
       <div class="card"><div class="ic" style="background:#dcfce7;color:#15803d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></div><div class="k">Python · GitHub Actions · DevOps</div><h4>Uptime Monitor</h4><p>Checks my live sites every 10 minutes for status, latency and TLS expiry, logs incidents, sends Telegram alerts and publishes a public status page. Zero dependencies, 23 tests.</p><div class="cl"><a href="https://siddhanth-mani.github.io/uptime-monitor/" target="_blank" rel="noopener">Live status</a> &nbsp;·&nbsp; <a href="https://github.com/Siddhanth-Mani/uptime-monitor" target="_blank" rel="noopener">View on GitHub</a></div></div>
       <div class="card"><div class="ic" style="background:#fee2e2;color:#b91c1c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg></div><div class="k">Security · JavaScript</div><h4>Web Security Sandbox</h4><p>Interactive guide to SSRF, JWT flaws, injection, request smuggling and WAFs, with an in-browser lab for each. Strict CSP, nothing leaves the page.</p><div class="cl"><a href="https://siddhanth-mani.github.io/cybersecurity-sandbox/" target="_blank" rel="noopener">Try it</a> &nbsp;·&nbsp; <a href="https://github.com/Siddhanth-Mani/cybersecurity-sandbox" target="_blank" rel="noopener">View on GitHub</a></div></div>
+      <div class="card"><div class="ic" style="background:#e0f2fe;color:#0369a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4M7 9l2 2-2 2M12 13h4"/></svg></div><div class="k">Python · PyQt5 · Desktop</div><h4>IT Admin Pro</h4><p>Real-time Windows monitor — live CPU, RAM, disk and network gauges, a process manager, services, event-log viewer and network tools, with JSON/TXT reports.</p><div class="cl"><a href="https://github.com/Siddhanth-Mani/it-admin-pro" target="_blank" rel="noopener">View on GitHub</a></div></div>
+      <div class="card"><div class="ic" style="background:#dcfce7;color:#15803d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 13h4M8 16h7"/></svg></div><div class="k">JavaScript · IT support</div><h4>Service Desk</h4><p>The single-user, offline first version of the IT Helpdesk: SLA timers that pause while waiting on the user, history, stats and CSV export, all in the browser.</p><div class="cl"><a href="https://siddhanth-mani.github.io/service-desk/" target="_blank" rel="noopener">Try it</a> &nbsp;·&nbsp; <a href="https://github.com/Siddhanth-Mani/service-desk" target="_blank" rel="noopener">View on GitHub</a></div></div>
+      <div class="card"><div class="ic" style="background:#f0fdf4;color:#15803d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="3"/><path d="M11 6h2M10 18h4"/></svg></div><div class="k">Python · ADB · Dashboard</div><h4>Android Device Console</h4><p>Local web dashboard for Android device administration over ADB/fastboot — device checks and screen capture — with a strict command whitelist and no shell execution.</p><div class="cl"><span>Source available on request</span></div></div>
+      <div class="card"><div class="ic" style="background:#e5e7eb;color:#111827"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m6 9 3 3-3 3M12 15h5"/></svg></div><div class="k">Security · Home lab</div><h4>Kali Linux Cyber Lab</h4><p>Virtualised Kali Linux lab for practising reconnaissance, vulnerability assessment and Linux security operations, including a structured pen-testing exercise from recon to report.</p></div>
+      <div class="card"><div class="ic" style="background:#fee2e2;color:#b91c1c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg></div><div class="k">React · Vite · Tailwind</div><h4>SOC Dashboard</h4><p>Security operations centre prototype with live threat telemetry, MITRE ATT&amp;CK-tagged alerts and an AI analyst view.</p></div>
+      <div class="card"><div class="ic" style="background:#fef3c7;color:#b45309"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20M6 20V10l6-6 6 6v10"/><path d="M10 20v-6h4v6"/></svg></div><div class="k">Python · Matplotlib</div><h4>Nausori Geotechnical Check</h4><p>Independently re-verifies a foundation design: pile capacity, settlement and footing feasibility, with charts of capacity against design load.</p></div>
+      </div>
+      <h3 class="grid-head rv">Coursework &amp; early work</h3>
+      <div class="grid small rv">
       <div class="card"><div class="ic" style="background:#e0e7ff;color:#3730a3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10 12 4l9 6"/><path d="M5 10v9h14v-9M10 19v-5h4v5"/></svg></div><div class="k">Web · High school, 2022</div><h4>Xavier College Website</h4><p>My first website: 15 pages for my school with ten department pages, an image slider and a 50-photo gallery. Restored in 2026 with a phone-friendly, iOS-style layer. HTML, CSS, jQuery.</p><div class="cl"><a href="https://siddhanth-mani.github.io/xavier-college-website/" target="_blank" rel="noopener">View site</a> &nbsp;·&nbsp; <a href="https://github.com/Siddhanth-Mani/xavier-college-website" target="_blank" rel="noopener">View on GitHub</a></div></div>
       <div class="card"><div class="ic" style="background:#fde8d4;color:#c7781c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg></div><div class="k">Web · E-commerce</div><h4>RetroRack</h4><p>Clothing store with product catalogue, shopping cart and a fully responsive layout. HTML, CSS, Bootstrap, JavaScript.</p><div class="cl"><span>Source available on request</span></div></div>
       <div class="card"><div class="ic" style="background:#dbeafe;color:#1d4ed8"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg></div><div class="k">Desktop · Database</div><h4>Relief Inventory System</h4><p>Tracks and allocates relief goods with a MySQL backend for persistence and reporting. VB.NET.</p><div class="cl"><span>Source available on request</span></div></div>
       <div class="card"><div class="ic" style="background:#dcfce7;color:#15803d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg></div><div class="k">Automation</div><h4>STEMP Slip Generator</h4><p>Python script producing formatted allowance slips for a government student programme — hours of manual work cut down.</p><div class="cl"><span>Source available on request</span></div></div>
       <div class="card"><div class="ic" style="background:#ede9fe;color:#6d28d9"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="12" r="2.5"/><circle cx="12" cy="12" r="2.5"/><circle cx="19" cy="12" r="2.5"/><path d="M7.5 12h2M14.5 12h2"/></svg></div><div class="k">C++ · Data structures</div><h4>Student Marks System</h4><p>Command-line app using a linked list to store, sort and query student results.</p><div class="cl"><span>Source available on request</span></div></div>
-      <div class="card"><div class="ic" style="background:#e5e7eb;color:#111827"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m6 9 3 3-3 3M12 15h5"/></svg></div><div class="k">Security · Home lab</div><h4>Kali Linux Cyber Lab</h4><p>Virtualised Kali Linux lab for practising reconnaissance, vulnerability assessment and Linux security operations, including a structured pen-testing exercise from recon to report.</p></div>
-      <div class="card"><div class="ic" style="background:#e0f2fe;color:#0369a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4M7 9l2 2-2 2M12 13h4"/></svg></div><div class="k">Python · PyQt5 · Desktop</div><h4>IT Admin Pro</h4><p>Real-time Windows monitor — live CPU, RAM, disk and network gauges, a process manager, services, event-log viewer and network tools, with JSON/TXT reports.</p><div class="cl"><a href="https://github.com/Siddhanth-Mani/it-admin-pro" target="_blank" rel="noopener">View on GitHub</a></div></div>
-      <div class="card"><div class="ic" style="background:#f0fdf4;color:#15803d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="3"/><path d="M11 6h2M10 18h4"/></svg></div><div class="k">Python · ADB · Dashboard</div><h4>Android Device Console</h4><p>Local web dashboard for Android device administration over ADB/fastboot — device checks and screen capture — with a strict command whitelist and no shell execution.</p><div class="cl"><span>Source available on request</span></div></div>
-      <div class="card"><div class="ic" style="background:#eef2ff;color:#4338ca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7V4h6v3M8 7h8v3a4 4 0 0 1-8 0zM12 14v4M9 21h6"/><circle cx="12" cy="10" r="1.3"/></svg></div><div class="k">C# · WPF · Endpoint security</div><h4>USBAuthGuard</h4><p>Turns a trusted USB drive into a physical key: Windows locks when it is pulled out, unknown drives trigger an alert, and an AES-encrypted vault opens only with the key present.</p><div class="cl"><a href="https://github.com/Siddhanth-Mani/usb-auth-guard" target="_blank" rel="noopener">View on GitHub</a></div></div>
+      </div>
     </div>
   </section>
 
@@ -581,11 +609,11 @@ h2 .w{display:inline-block;opacity:0;transform:translateY(.55em) rotate(2deg);tr
   </section>
 </main>
 
-<footer><div class="wrap"><span>Copyright © <span id="yr"></span> Siddhanth Kartik Mani. All rights reserved.</span><span>Suva, Fiji · siddhanthmani3@gmail.com</span></div></footer>
+<footer><div class="wrap"><span>Copyright © <span id="yr"></span> Siddhanth Kartik Mani. All rights reserved.</span><span>Suva, Fiji · siddhanthmani3@gmail.com · <a href="https://siddhanth-mani.github.io/uptime-monitor/" target="_blank" rel="noopener">Site status</a></span></div></footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
         integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="assets/js/main.js?v=20261119b"></script>
+<script src="assets/js/main.js?v=20261120a"></script>
 </body>
 </html>
