@@ -10,3 +10,6 @@ if (window.top !== window.self) {
   document.documentElement.style.display = 'none';
   try { window.top.location = window.self.location.href; } catch (e) { /* sandboxed frame: page stays hidden */ }
 }
+
+/* One public address: visitors on the github.io copy go to the real domain. */
+if (/\.github\.io$/.test(location.hostname)) location.replace('https://siddhanth.ryzn.pro' + location.pathname + location.search + location.hash);
