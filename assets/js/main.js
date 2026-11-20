@@ -608,7 +608,7 @@ const levels = [
     opts: ['Change one character', 'Turn on MFA + new password', 'Security question', 'Clear your cookies'], ans: 1, note: 'Perfect — a fresh unique password plus MFA stops credential stuffing. +1,000 XP' },
 ];
 const qflip = document.getElementById('qflip'), qdots = document.getElementById('qdots'), qxp = document.getElementById('qxp');
-levels.forEach(() => qdots.appendChild(document.createElement('i')));
+if (qflip) levels.forEach(() => qdots.appendChild(document.createElement('i')));
 let qi = 0, qxpVal = 0, busy = false;
 const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
 function paintDots(){ [...qdots.children].forEach((d, i) => { d.className = i < qi ? 'done' : i === qi ? 'on' : ''; }); }
@@ -651,7 +651,7 @@ function renderDone(){
   qflip.append(box); paintDots();
   again.addEventListener('click', () => { if (busy) return; busy = true; qxpVal = 0; qxp.textContent = '0 XP'; qi = 0; flipTo(renderLevel); });
 }
-renderLevel();
+if (qflip) renderLevel();
 
 /* ---------- skills (real logos, built with DOM APIs) ---------- */
 const D = n => `https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/${n}.svg`;

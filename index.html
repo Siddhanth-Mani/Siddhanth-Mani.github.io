@@ -361,7 +361,6 @@ footer a{color:var(--link)}
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#work">Work</a></li>
-      <li><a href="#games">Games</a></li>
       <li><a href="#more">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#specs">Background</a></li>
@@ -411,8 +410,8 @@ footer a{color:var(--link)}
         <div class="chap" data-i="4">
           <div class="eyebrow">For fun</div>
           <h2>And sometimes,<br>games.</h2>
-          <p>An Android reflex game ready for Google Play, and a mobile game that teaches cybersecurity.</p>
-          <div class="ctas"><a class="pill" href="#about">Keep scrolling</a></div>
+          <p>Grand City: an open-world driving game on a C++ engine and Direct3D 12 renderer I wrote myself.</p>
+          <div class="ctas"><a class="pill" href="#work">See Grand City</a></div>
         </div>
       </div>
       <nav class="dots" id="dots" aria-label="Story chapters"><button type="button">Hello</button><button type="button">Support</button><button type="button">Study</button><button type="button">AI</button><button type="button">Games</button></nav>
@@ -476,7 +475,21 @@ footer a{color:var(--link)}
           <div class="visual"><figure class="shot tilt"><div class="chrome"><i></i><i></i><i></i><small>siddhanth.ryzn.pro/helpdesk</small></div><img src="assets/shots/helpdesk.jpg" alt="IT Helpdesk dashboard showing open, overdue and at-risk tickets, SLA met percentage and a 14-day chart" loading="lazy" width="800" height="500"></figure></div>
         </article>
 
-        <article class="tile rv">
+        <article class="tile full dark rv">
+          <div class="kick" style="color:#e39a45">C++17 · Direct3D 12 · Lua</div>
+          <h3>Grand City</h3>
+          <div class="sub">An open-world driving game on a game engine and renderer I wrote from scratch: no Unity, no Unreal.</div>
+          <div class="links"><span style="color:var(--text-2);font-size:14px">Windows build · source available on request</span></div>
+          <div class="nb-stats">
+            <div><b data-count="148">148</b><span>automated checks, incl. a full play-through</span></div>
+            <div><b data-count="8">8</b><span>car body styles, built in code</span></div>
+            <div><b data-count="16">16</b><span>dynamic lights with sun shadows</span></div>
+          </div>
+          <details class="case"><summary>Read the case study</summary><div class="case-body"><div><h5>Problem</h5><p>I wanted to know what a game engine actually does underneath: the frame loop, the physics step, the renderer and the scripting, rather than leaning on Unity or Unreal.</p></div><div><h5>Approach</h5><p>A C++17 engine with a fixed 60 Hz physics step: tyre grip model, per-wheel suspension, gearbox and differential, ABS and traction control. A Direct3D 12 renderer with physically based lighting, sun shadow maps, 4× MSAA, tone mapping and a day/night sky with street lamps and headlights. The city, cars and pedestrians are generated in code, with no third-party assets. Traffic and police use A* on the road graph, missions are Lua scripts and saves are JSON.</p></div><div><h5>Result</h5><p>Playable on Windows: six story missions, six cars with garage upgrades, police chases, weather and a full day/night cycle. A headless renderer runs the whole game in 148 automated checks, including a play-through with save and load.</p></div></div></details>
+          <div class="visual"><figure class="shot tilt"><div class="chrome"><i></i><i></i><i></i><small>Grand City · Direct3D 12 · night</small></div><img src="assets/shots/grandcity-night.jpg" alt="Grand City at night: a blue saloon at a crossing lit by street lamps and headlights, with lit office windows behind" loading="lazy" width="800" height="500"></figure></div>
+        </article>
+
+        <article class="tile full rv">
           <div class="kick">JavaScript · Networking · CCNA</div>
           <h3>PacketLab</h3>
           <div class="sub">A network simulator in the browser: build topologies, trace packets hop by hop and fix broken links.</div>
@@ -485,54 +498,6 @@ footer a{color:var(--link)}
           <div class="visual"><figure class="shot tilt"><div class="chrome"><i></i><i></i><i></i><small>PacketLab</small></div><img src="assets/shots/packetlab.jpg" alt="PacketLab topology workspace with a router, switch and devices" loading="lazy" width="800" height="500"></figure></div>
         </article>
 
-        <article class="tile rv">
-          <div class="kick">JavaScript · WebGL2 · Vehicle physics</div>
-          <h3>PlayForge</h3>
-          <div class="sub">Type “a night race through Suva” and play it a second later.</div>
-          <div class="links"><a class="pill" href="https://siddhanth-mani.github.io/playforge/" target="_blank" rel="noopener">Play it</a><a class="more" href="https://github.com/Siddhanth-Mani/playforge" target="_blank" rel="noopener">GitHub</a></div>
-          <p class="note">3D racing on a WebGL2 renderer written from scratch, with real car physics: tyre slip, load transfer, ABS and stability control. Also platformer and shooter engines, AI rivals, missions, an editor and share links. 27 tests.</p>
-          <div class="visual"><figure class="shot tilt"><div class="chrome"><i></i><i></i><i></i><small>PlayForge · City at night</small></div><img src="assets/shots/playforge.jpg" alt="PlayForge racing game in 3D: rally cars racing at night through a neon city" loading="lazy" width="800" height="500"></figure></div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== GAMES ===== -->
-  <section class="sec" id="games">
-    <div class="wide">
-      <div class="sec-title rv"><h2>Games.</h2><p>Built for fun. Engineered properly.</p></div>
-      <div class="tiles">
-        <article class="tile full rv">
-          <div class="kick">C++17 · Direct3D 12 · Lua</div>
-          <h3>Grand City</h3>
-          <div class="sub">An open-world driving game on an engine I wrote myself: no Unity, no Unreal.</div>
-          <div class="links"><span style="color:var(--text-2);font-size:14px">Windows build · source available on request</span></div>
-          <details class="case"><summary>Read the case study</summary><div class="case-body"><div><h5>Problem</h5><p>I wanted to know what a game engine actually does underneath: the frame loop, the physics step, the renderer and the scripting, rather than leaning on Unity or Unreal.</p></div><div><h5>Approach</h5><p>A C++17 engine with a fixed 60 Hz physics step: tyre grip model, per-wheel suspension, gearbox and differential, plus ABS and traction control. Traffic and police use A* on the road graph. Missions are Lua scripts, saves are JSON, and a Direct3D 12 renderer draws the city, HUD and minimap. A headless renderer runs the whole game in automated tests.</p></div><div><h5>Result</h5><p>Playable on Windows: six story missions, six cars with garage upgrades, police chases, stunt jumps and 50 hidden packages. 148 automated checks, including a full play-through with save and load.</p></div></div></details>
-          <div class="visual"><figure class="shot tilt"><div class="chrome"><i></i><i></i><i></i><small>Grand City · Direct3D 12</small></div><img src="assets/shots/grandcity.jpg" alt="Grand City: a blue car driving down a city street, with speedometer, money, wanted level and minimap on screen" loading="lazy" width="1280" height="720"></figure></div>
-        </article>
-        <article class="tile rv">
-          <div class="kick">Android · JavaScript Canvas · Java</div>
-          <h3>Tap Reflex</h3>
-          <div class="sub">Tap targets before they vanish, dodge bombs and climb from Bronze to Apex. Seven modes, daily challenges, ghost races and power-ups — fully offline.</div>
-          <div class="links"><a class="more" href="https://github.com/Siddhanth-Mani/TapReflexChallenge" target="_blank" rel="noopener">View on GitHub</a><span style="color:var(--text-2);font-size:14px">Prepared for Google Play</span></div>
-          <div class="visual">
-            <div class="phones">
-              <div class="phone"><img src="assets/tapreflex_menu.jpg" alt="Tap Reflex main menu" loading="lazy"></div>
-              <div class="phone"><img src="assets/tapreflex_play.jpg" alt="Tap Reflex gameplay" loading="lazy"></div>
-            </div>
-          </div>
-        </article>
-        <article class="tile rv">
-          <div class="kick">React Native · Redux Toolkit</div>
-          <h3>CyberSec Challenge</h3>
-          <div class="sub">Learn security by playing — passwords, phishing, crypto, ports and SQL injection, with XP and a leaderboard. Try a real question:</div>
-          <div class="visual">
-            <div class="quiz">
-              <div class="qbar"><div class="qdots" id="qdots"></div><span class="qxp" id="qxp">0 XP</span></div>
-              <div class="qflip" id="qflip"></div>
-            </div>
-          </div>
-        </article>
       </div>
     </div>
   </section>
@@ -540,7 +505,7 @@ footer a{color:var(--link)}
   <!-- ===== MORE PROJECTS ===== -->
   <section class="sec alt" id="more">
     <div class="wide">
-      <div class="sec-title rv"><h2>More projects.</h2><p>Security tools, network utilities and admin apps.</p></div>
+      <div class="sec-title rv"><h2>More projects.</h2><p>Security tools, network utilities, admin apps and a few games.</p></div>
       <div class="grid rv">
       <div class="card"><div class="ic" style="background:#eef2ff;color:#4338ca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7V4h6v3M8 7h8v3a4 4 0 0 1-8 0zM12 14v4M9 21h6"/><circle cx="12" cy="10" r="1.3"/></svg></div><div class="k">C# · WPF · Endpoint security</div><h4>USBAuthGuard</h4><p>Turns a trusted USB drive into a physical key: Windows locks when it is pulled out, unknown drives trigger an alert, and an AES-encrypted vault opens only with the key present.</p><div class="cl"><a href="https://github.com/Siddhanth-Mani/usb-auth-guard" target="_blank" rel="noopener">View on GitHub</a></div></div>
       <div class="card"><div class="ic" style="background:#fee2e2;color:#b91c1c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h5M8 17h3"/><circle cx="17" cy="16" r="2.5"/><path d="m19 18 2 2"/></svg></div><div class="k">Python · Security · Blue team</div><h4>Log Triage</h4><p>Reads SSH auth logs and nginx/Apache access logs and flags brute force, logins that succeed after failures, scanners, exposed secret files and injection attempts. Text, JSON or HTML reports; no dependencies, 31 tests.</p><div class="cl"><a href="https://siddhanth-mani.github.io/log-triage/" target="_blank" rel="noopener">Sample report</a> &nbsp;·&nbsp; <a href="https://github.com/Siddhanth-Mani/log-triage" target="_blank" rel="noopener">View on GitHub</a></div></div>
@@ -553,6 +518,9 @@ footer a{color:var(--link)}
       <div class="card"><div class="ic" style="background:#e5e7eb;color:#111827"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m6 9 3 3-3 3M12 15h5"/></svg></div><div class="k">Security · Home lab</div><h4>Kali Linux Cyber Lab</h4><p>Virtualised Kali Linux lab for practising reconnaissance, vulnerability assessment and Linux security operations, including a structured pen-testing exercise from recon to report.</p></div>
       <div class="card"><div class="ic" style="background:#fee2e2;color:#b91c1c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg></div><div class="k">React · Vite · Tailwind</div><h4>SOC Dashboard</h4><p>Security operations centre prototype with live threat telemetry, MITRE ATT&amp;CK-tagged alerts and an AI analyst view.</p></div>
       <div class="card"><div class="ic" style="background:#fef3c7;color:#b45309"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20M6 20V10l6-6 6 6v10"/><path d="M10 20v-6h4v6"/></svg></div><div class="k">Python · Matplotlib</div><h4>Nausori Geotechnical Check</h4><p>Independently re-verifies a foundation design: pile capacity, settlement and footing feasibility, with charts of capacity against design load.</p></div>
+      <div class="card"><div class="ic" style="background:#fef3c7;color:#b45309"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14l-1.5-5h-11z"/><circle cx="8" cy="17" r="2"/><circle cx="16" cy="17" r="2"/><path d="M7.5 12 9 8h6l1.5 4"/></svg></div><div class="k">JavaScript · WebGL2 · Vehicle physics</div><h4>PlayForge</h4><p>Type a sentence like “a night race through Suva” and play it a second later. A WebGL2 renderer written from scratch, car physics with tyre slip and stability control, plus platformer and shooter modes. 27 tests.</p><div class="cl"><a href="https://siddhanth-mani.github.io/playforge/" target="_blank" rel="noopener">Play it</a> &nbsp;·&nbsp; <a href="https://github.com/Siddhanth-Mani/playforge" target="_blank" rel="noopener">View on GitHub</a></div></div>
+      <div class="card"><div class="ic" style="background:#dcfce7;color:#15803d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><circle cx="12" cy="11" r="3"/><path d="M11 18h2"/></svg></div><div class="k">Android · Java · Canvas</div><h4>Tap Reflex</h4><p>An offline Android reflex game: seven modes, daily challenges, ghost races and ranked tiers from Bronze to Apex. Prepared for Google Play.</p><div class="cl"><a href="https://github.com/Siddhanth-Mani/TapReflexChallenge" target="_blank" rel="noopener">View on GitHub</a></div></div>
+      <div class="card"><div class="ic" style="background:#fee2e2;color:#b91c1c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.5" r="1.5"/></svg></div><div class="k">React Native · Redux Toolkit</div><h4>CyberSec Challenge</h4><p>A mobile game that teaches security: passwords, phishing, cryptography, ports and SQL injection, with XP, levels and a leaderboard.</p><div class="cl"><span>Source available on request</span></div></div>
       </div>
       <h3 class="grid-head rv">Coursework &amp; early work</h3>
       <div class="grid small rv">
@@ -622,6 +590,6 @@ footer a{color:var(--link)}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
         integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="assets/js/main.js?v=20261120a"></script>
+<script src="assets/js/main.js?v=20261120b"></script>
 </body>
 </html>
