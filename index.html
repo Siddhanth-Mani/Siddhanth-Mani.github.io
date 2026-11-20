@@ -438,7 +438,7 @@ footer a{color:var(--link)}
         <div class="fact rv"><b data-count="3">3</b><span>years in IT support</span></div>
         <div class="fact rv"><b data-count="12">12</b><span>open-source projects on GitHub</span></div>
         <div class="fact rv"><b data-count="5">5</b><span>AI providers integrated</span></div>
-        <div class="fact rv"><b data-count="20">20</b><span>projects &amp; games built</span></div>
+        <div class="fact rv"><b data-count="21">21</b><span>projects &amp; games built</span></div>
       </div>
     </div>
   </section>
@@ -502,6 +502,14 @@ footer a{color:var(--link)}
     <div class="wide">
       <div class="sec-title rv"><h2>Games.</h2><p>Built for fun. Engineered properly.</p></div>
       <div class="tiles">
+        <article class="tile full rv">
+          <div class="kick">C++17 · Direct3D 12 · Lua</div>
+          <h3>Grand City</h3>
+          <div class="sub">An open-world driving game on an engine I wrote myself: no Unity, no Unreal.</div>
+          <div class="links"><span style="color:var(--text-2);font-size:14px">Windows build · source available on request</span></div>
+          <details class="case"><summary>Read the case study</summary><div class="case-body"><div><h5>Problem</h5><p>I wanted to know what a game engine actually does underneath: the frame loop, the physics step, the renderer and the scripting, rather than leaning on Unity or Unreal.</p></div><div><h5>Approach</h5><p>A C++17 engine with a fixed 60 Hz physics step: tyre grip model, per-wheel suspension, gearbox and differential, plus ABS and traction control. Traffic and police use A* on the road graph. Missions are Lua scripts, saves are JSON, and a Direct3D 12 renderer draws the city, HUD and minimap. A headless renderer runs the whole game in automated tests.</p></div><div><h5>Result</h5><p>Playable on Windows: six story missions, six cars with garage upgrades, police chases, stunt jumps and 50 hidden packages. 148 automated checks, including a full play-through with save and load.</p></div></div></details>
+          <div class="visual"><figure class="shot tilt"><div class="chrome"><i></i><i></i><i></i><small>Grand City · Direct3D 12</small></div><img src="assets/shots/grandcity.jpg" alt="Grand City: a blue car driving down a city street, with speedometer, money, wanted level and minimap on screen" loading="lazy" width="1280" height="720"></figure></div>
+        </article>
         <article class="tile rv">
           <div class="kick">Android · JavaScript Canvas · Java</div>
           <h3>Tap Reflex</h3>
